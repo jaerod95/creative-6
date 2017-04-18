@@ -1,0 +1,60 @@
+body {
+	background-color: white;
+	margin: auto;
+    width: 100%;
+}
+
+.riddle {
+	text-align: center;
+}
+
+.answer {
+  display: none;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 30px;
+  color:green;
+}
+
+#riddle1:hover #riddle1Answer {
+  display: block;
+}
+
+#riddle2:hover #riddle2Answer {
+  display: block;
+}
+
+#riddle3:hover #riddle3Answer {
+  display: block;
+}
+
+#riddle4:hover #riddle4Answer {
+  display: block;
+}
+
+#riddle5:hover #riddle5Answer {
+  display: block;
+}
+
+
+#riddle1Answer {
+	color:gray;
+}
+
+#riddle2Answer {
+	color:yellow;
+}
+
+#riddle3Answer {
+	color:tan;
+}
+
+#riddle4Answer {
+	color:maroon;
+}
+
+#riddle5Answer {
+	color:black;
+}
