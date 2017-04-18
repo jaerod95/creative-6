@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  p Yay we logged in! Now we can do whatever right here!
+  button#sign_out Sign Out
+  script.
+    document.getElementById('sign_out').addEventListener('click', function() {
+        firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        console.log('signed out');
+        window.location = '/';
+        }).catch(function(error) {
+        // An error happened.
+        console.log('err' + error);
+      });
+    })
+    
