@@ -1,9 +1,55 @@
 extends layout
 
 block content
-  p Yay we logged in! Now we can do whatever right here!
-  button#sign_out Sign Out
+  div.main_content
+    riddle1.riddle
+      p
+        | Imagine you are in a dark room. How do you get out?
+      | &#x9;  
+      span#riddle1Answer.answer
+        | Stop imagining
+    | &#x9;
+    #riddle2.riddle
+      p
+        | You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What did you eat?
+      | &#x9;  
+      span#riddle2Answer.answer
+        | Corn
+    | &#x9;
+    #riddle3.riddle
+      p
+        | The more you take, the more you leave behind. What am I?
+      | &#x9;  
+      span#riddle3Answer.answer
+        | Footsteps
+    | &#x9;
+    #riddle4.riddle
+      p
+        | What comes once in a minute, Twice in a moment, But never in a thousand years.
+      | &#x9;  
+      span#riddle4Answer.answer
+        | The letter &quot;m&quot;
+    | &#x9;
+    #riddle5.riddle
+      p
+        | What is so delicate that even saying its name will break it?
+      | &#x9;  
+      span#riddle5Answer.answer
+        | Silence
+    | &#x9;
+    button#sign_out Sign Out
+    | &#x9;
+
   script.
+    firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+    // User is signed in.
+    } else {
+    window.location = '/';
+    }
+    });
+
+
     document.getElementById('sign_out').addEventListener('click', function() {
         firebase.auth().signOut().then(function() {
         // Sign-out successful.

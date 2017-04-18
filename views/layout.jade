@@ -4,5 +4,17 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src="https://www.gstatic.com/firebasejs/3.7.8/firebase.js")
+    script.
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyAlp7Ujuh4ynyXphIEaVZMToG2MyHv5dio",
+      authDomain: "creative-6-cb230.firebaseapp.com",
+      databaseURL: "https://creative-6-cb230.firebaseio.com",
+      projectId: "creative-6-cb230",
+      storageBucket: "creative-6-cb230.appspot.com",
+      messagingSenderId: "1086498327472"
+      };
+
+      firebase.initializeApp(config);
   body
     block content
