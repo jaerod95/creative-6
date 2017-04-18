@@ -2,7 +2,9 @@ extends layout
 
 block content
   div.main_main
-    button#click_login Login
+    h1.title Welcome to the Riddle Sanctum
+    img(src="./images/GitHub-Mark.png" id="git_logo")
+    button#click_login Login with Github
     script.
 
       document.getElementById('click_login').addEventListener('click', function() {
